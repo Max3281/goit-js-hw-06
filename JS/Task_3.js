@@ -1,4 +1,4 @@
-console.log('Task_3')
+console.log("Task_3");
 const images = [
   {
     url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
@@ -14,26 +14,11 @@ const images = [
   },
 ];
 
-// Method_1
-
-// const generalGalleryEl = document.querySelector('.gallery')
-// images.forEach(value => {
-//     const localLiEL = document.createElement('li');
-//     console.log(value)
-//     let localImgEl = document.createElement('img');
-//     localImgEl.classList.add('task-img')
-//     localImgEl.src = value.url;
-//     localImgEl.alt = value.alt;
-//     localLiEL.appendChild(localImgEl)
-//     generalGalleryEl.appendChild(localLiEL)
-// })
-
-// Method_2
-
-const generalGalleryEl = document.querySelector('.gallery')
-images.forEach(value => {
-    const imgCheck = `<li><img class="task-img" src=${value.url} alt=${value.alt}></li>`
-    generalGalleryEl.insertAdjacentHTML("beforeend", imgCheck);
-})
-
-console.log('____________________________')
+const generalGalleryEl = document.querySelector(".gallery");
+const imgArray = [];
+images.map((value) => {
+  let imgCheck = `<li><img class="task-img" src=${value.url} alt=${value.alt}></li>`;
+  imgArray.push(imgCheck);
+});
+generalGalleryEl.insertAdjacentHTML("beforeend", imgArray.join(""));
+console.log("____________________________");

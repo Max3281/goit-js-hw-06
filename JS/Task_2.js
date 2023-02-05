@@ -1,4 +1,4 @@
-console.log('Task_2')
+console.log("Task_2");
 
 const ingredients = [
   "Potatoes",
@@ -8,13 +8,14 @@ const ingredients = [
   "Herbs",
   "Condiments",
 ];
-const generalRecEl = document.querySelector('#ingredients')
-// ingridientListEl.textContent = "It's work"
-// generalRecEl.appendChild(ingridientListEl)
-ingredients.forEach(value => {
-    const ingridientListEl = document.createElement('li')
-    ingridientListEl.textContent = value;
-    ingridientListEl.classList.add("item")
-    generalRecEl.appendChild(ingridientListEl)
-})
-console.log('____________________________')
+const generalRecEl = document.querySelector("#ingredients");
+const emptyArray = [];
+ingredients.map((value) => {
+  const ingridientListEl = document.createElement("li");
+  ingridientListEl.textContent = value;
+  ingridientListEl.classList.add("item");
+  emptyArray.push(ingridientListEl);
+});
+console.log(...emptyArray);
+generalRecEl.append(...emptyArray);
+console.log("____________________________");

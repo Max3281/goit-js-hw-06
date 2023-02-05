@@ -1,4 +1,4 @@
-console.log('Task_9')
+console.log("Task_9");
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
@@ -6,14 +6,14 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-const randomColorButtonEl = document.querySelector('.change-color')
-const divBGColorEl = document.querySelector('.widget')
+const randomColorButtonEl = document.querySelector(".change-color");
+const divBGColorEl = document.querySelector(".widget");
 
-randomColorButtonEl.addEventListener('click', onClick)
+randomColorButtonEl.addEventListener("click", onClick);
 
 function onClick() {
-  console.log('its work')
-    divBGColorEl.setAttribute("style", `background-color:${getRandomHexColor()}`)
+  console.log("its work");
+  divBGColorEl.setAttribute("style", `background-color:${getRandomHexColor()}`);
 }
 
-console.log('____________________________')
+console.log("____________________________");
